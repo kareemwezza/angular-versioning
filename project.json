@@ -9,7 +9,9 @@
   "targets": {
     "build": {
       "executor": "@angular/build:application",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/gozetta",
         "browser": "./src/main.ts",
@@ -20,7 +22,9 @@
             "input": "public"
           }
         ],
-        "styles": ["./src/styles.css"]
+        "styles": [
+          "./src/styles.css"
+        ]
       },
       "configurations": {
         "production": {
@@ -62,7 +66,9 @@
     "lint": {
       "executor": "@nx/eslint:lint",
       "options": {
-        "lintFilePatterns": ["./src"]
+        "lintFilePatterns": [
+          "./src"
+        ]
       }
     },
     "test": {
@@ -77,6 +83,14 @@
         "port": 4200,
         "staticFilePath": "dist/gozetta/browser",
         "spa": true
+      }
+    },
+    "local-registry": {
+      "executor": "@nx/js:verdaccio",
+      "options": {
+        "port": 4873,
+        "config": ".verdaccio/config.yml",
+        "storage": "tmp/local-registry/storage"
       }
     }
   }

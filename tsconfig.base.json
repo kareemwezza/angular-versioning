@@ -1,0 +1,17 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "moduleResolution": "bundler",
+    "emitDecoratorMetadata": false,
+    "target": "es2022",
+    "module": "preserve",
+    "lib": ["es2020", "dom"],
+    "baseUrl": ".",
+    "paths": {
+      "@gozetta/z-maps": ["libs/z-maps/src/index.ts"],
+      "@gozetta/z-maps/core": ["libs/z-maps/core/src/index.ts"],
+      "@gozetta/z-maps/vehicle": ["libs/z-maps/vehicle/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
